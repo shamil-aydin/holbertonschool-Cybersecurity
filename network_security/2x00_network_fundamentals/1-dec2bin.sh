@@ -1,2 +1,3 @@
 #!/bin/bash
-printf "00000000\n" $(bc <<< "obase=2; $1")
+binary=$(echo "obase=2; $1" | bc)
+printf "%08d\n" "$binary"
